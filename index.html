@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reflexia | Інвестоб'єкт у Славському</title>
+  <meta name="description" content="Три дзеркальні будинки у Славському біля гори Тростян. Продаж інвестоб'єкта на стадії високої готовності.">
+  <meta property="og:title" content="Reflexia | Дзеркальні будинки у Славському">
+  <meta property="og:description" content="3 автономні будинки біля підйомника Тростян. Продаж як інвестоб'єкта або частинами.">
+  <meta property="og:image" content="assets/images/hero-real.jpg">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #263d2c;
+      --olive: #6c7a63;
+      --black-olive: #383d39;
+      --silver: #b5b9ba;
+      --timberwolf: #d7d7d7;
+      --linen: #faf1e5;
+      --vanilla: #ffedad;
+      --salmon: #d88b75;
+      --white: #fffaf0;
+      --shadow: rgba(16, 26, 19, 0.28);
+      --radius: 8px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--forest);
+    }
+
+    body {
+      margin: 0;
+      color: var(--linen);
+      background:
+        linear-gradient(180deg, rgba(38, 61, 44, 0.94), rgba(38, 61, 44, 0.98)),
+        var(--forest);
+      font-family: "Montserrat Alternates", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    img, video { max-width: 100%; display: block; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    .page-shell {
+      overflow: hidden;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: fixed;
+      z-index: 30;
+      inset: 0 0 auto;
+      background: rgba(38, 61, 44, 0.78);
+      border-bottom: 1px solid rgba(250, 241, 229, 0.12);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      flex: 0 0 auto;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      display: grid;
+      gap: 0;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .brand-name strong {
+      font-weight: 400;
+      font-size: 22px;
+    }
+
+    .brand-name span {
+      color: rgba(250, 241, 229, 0.62);
+      font-size: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: rgba(250, 241, 229, 0.76);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--vanilla);
+    }
+
+    .btn {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      color: var(--forest);
+      background: var(--vanilla);
+      border-color: var(--vanilla);
+      font-weight: 600;
+    }
+
+    .btn-secondary {
+      color: var(--linen);
+      background: rgba(250, 241, 229, 0.07);
+      border-color: rgba(250, 241, 229, 0.22);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      align-items: end;
+      position: relative;
+      padding: 128px 0 56px;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(21, 34, 24, 0.92) 0%, rgba(21, 34, 24, 0.68) 43%, rgba(21, 34, 24, 0.18) 100%),
+        linear-gradient(0deg, rgba(38, 61, 44, 0.98) 0%, rgba(38, 61, 44, 0.05) 48%),
+        url("assets/images/hero-real.jpg") center / cover no-repeat;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.03fr) minmax(340px, 0.58fr);
+      gap: 40px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--vanilla);
+      font-family: Raleway, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 920px;
+      margin-top: 18px;
+      font-family: Raleway, sans-serif;
+      font-size: clamp(46px, 7.2vw, 92px);
+      line-height: 0.96;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      margin-top: 24px;
+      color: rgba(250, 241, 229, 0.82);
+      font-size: clamp(18px, 2vw, 22px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .quick-facts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .fact {
+      min-height: 112px;
+      padding: 18px;
+      border: 1px solid rgba(250, 241, 229, 0.12);
+      border-radius: var(--radius);
+      background: rgba(38, 61, 44, 0.72);
+      box-shadow: 0 18px 44px var(--shadow);
+    }
+
+    .fact strong {
+      display: block;
+      font-family: Raleway, sans-serif;
+      color: var(--vanilla);
+      font-size: 29px;
+      line-height: 1;
+      font-weight: 600;
+    }
+
+    .fact span {
+      display: block;
+      margin-top: 10px;
+      color: rgba(250, 241, 229, 0.72);
+      font-size: 13px;
+    }
+
+    section {
+      padding: 92px 0;
+      position: relative;
+    }
+
+    .section-muted {
+      background: var(--linen);
+      color: var(--black-olive);
+    }
+
+    .section-olive {
+      background: var(--olive);
+      color: var(--linen);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.82fr);
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 38px;
+    }
+
+    .section-kicker {
+      color: var(--salmon);
+      font-family: Raleway, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .section-muted .section-kicker {
+      color: #9f604f;
+    }
+
+    h2 {
+      margin-top: 12px;
+      font-family: Raleway, sans-serif;
+      font-size: clamp(34px, 4.8vw, 62px);
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      color: rgba(250, 241, 229, 0.74);
+      font-size: 18px;
+    }
+
+    .section-muted .lead {
+      color: rgba(56, 61, 57, 0.74);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .info-box {
+      min-height: 206px;
+      padding: 22px;
+      border: 1px solid rgba(38, 61, 44, 0.16);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.42);
+    }
+
+    .section-olive .info-box,
+    .dark-box {
+      border-color: rgba(250, 241, 229, 0.15);
+      background: rgba(38, 61, 44, 0.38);
+    }
+
+    .info-box h3 {
+      font-family: Raleway, sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .info-box p {
+      margin-top: 12px;
+      color: rgba(56, 61, 57, 0.72);
+    }
+
+    .section-olive .info-box p,
+    .dark-box p {
+      color: rgba(250, 241, 229, 0.72);
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .media-grid img,
+    .media-grid video,
+    .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid rgba(250, 241, 229, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .media-main {
+      min-height: 540px;
+    }
+
+    .media-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .media-stack > * {
+      min-height: 260px;
+    }
+
+    .tabs {
+      display: inline-grid;
+      grid-template-columns: minmax(140px, 1fr);
+      padding: 4px;
+      border: 1px solid rgba(250, 241, 229, 0.2);
+      border-radius: var(--radius);
+      background: rgba(38, 61, 44, 0.45);
+      margin-bottom: 28px;
+    }
+
+    .tab {
+      min-height: 44px;
+      border: 0;
+      border-radius: 6px;
+      color: rgba(250, 241, 229, 0.78);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .tab.is-active {
+      color: var(--forest);
+      background: var(--vanilla);
+      font-weight: 600;
+    }
+
+    .mode-panel[hidden] {
+      display: none;
+    }
+
+    .numbers {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .number {
+      padding: 18px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(250, 241, 229, 0.13);
+    }
+
+    .number strong {
+      display: block;
+      color: var(--vanilla);
+      font-family: Raleway, sans-serif;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .number span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(250, 241, 229, 0.68);
+      font-size: 13px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid rgba(38, 61, 44, 0.12);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.42);
+    }
+
+    table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    th, td {
+      padding: 16px 18px;
+      text-align: left;
+      border-bottom: 1px solid rgba(38, 61, 44, 0.1);
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--forest);
+      font-family: Raleway, sans-serif;
+      font-weight: 700;
+      background: rgba(255, 237, 173, 0.36);
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .status-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .progress {
+      padding: 26px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(250, 241, 229, 0.13);
+    }
+
+    .progress-value {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .progress-value strong {
+      color: var(--vanilla);
+      font-family: Raleway, sans-serif;
+      font-size: clamp(66px, 10vw, 132px);
+      line-height: 0.9;
+      font-weight: 500;
+    }
+
+    .bar {
+      height: 12px;
+      margin-top: 24px;
+      background: rgba(250, 241, 229, 0.16);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      width: 87%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--vanilla), var(--salmon));
+    }
+
+    .checklist {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 12px;
+      align-items: start;
+      color: rgba(250, 241, 229, 0.78);
+    }
+
+    .checklist li::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 237, 173, 0.65);
+      background:
+        linear-gradient(135deg, transparent 50%, rgba(255, 237, 173, 0.8) 50%) left 9px top 5px / 7px 10px no-repeat;
+    }
+
+    .carousel {
+      position: relative;
+      min-height: 620px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(250, 241, 229, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .carousel-image {
+      min-height: 620px;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px;
+      pointer-events: none;
+    }
+
+    .carousel-btn {
+      width: 48px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(250, 241, 229, 0.34);
+      border-radius: 999px;
+      color: var(--forest);
+      background: rgba(255, 237, 173, 0.9);
+      font-size: 30px;
+      line-height: 1;
+      cursor: pointer;
+      pointer-events: auto;
+      transition: transform 160ms ease, background 160ms ease;
+    }
+
+    .carousel-btn:hover {
+      transform: translateY(-1px);
+      background: var(--vanilla);
+    }
+
+    .carousel-status {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--linen);
+      background: rgba(38, 61, 44, 0.76);
+      border: 1px solid rgba(250, 241, 229, 0.14);
+      font-size: 13px;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(320px, 0.55fr);
+      gap: 36px;
+      align-items: start;
+    }
+
+    form {
+      padding: 24px;
+      border: 1px solid rgba(250, 241, 229, 0.14);
+      border-radius: var(--radius);
+      background: rgba(250, 241, 229, 0.08);
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    label {
+      color: rgba(250, 241, 229, 0.72);
+      font-size: 13px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      min-height: 46px;
+      color: var(--linen);
+      border: 1px solid rgba(250, 241, 229, 0.16);
+      border-radius: var(--radius);
+      background: rgba(38, 61, 44, 0.7);
+      padding: 10px 12px;
+      outline: 0;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 94px;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--vanilla);
+    }
+
+    .form-note {
+      margin-top: 12px;
+      color: rgba(250, 241, 229, 0.55);
+      font-size: 12px;
+    }
+
+    .footer {
+      padding: 28px 0;
+      color: rgba(250, 241, 229, 0.58);
+      border-top: 1px solid rgba(250, 241, 229, 0.1);
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 112px;
+      }
+
+      .hero-grid,
+      .section-head,
+      .media-grid,
+      .status-grid,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-facts,
+      .grid-3,
+      .numbers {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .media-main,
+      .media-stack > *,
+      .carousel,
+      .carousel-image {
+        min-height: 300px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(100% - 24px, var(--max));
+      }
+
+      .nav-inner {
+        min-height: 64px;
+      }
+
+      .brand-name strong {
+        font-size: 19px;
+      }
+
+      .nav .btn {
+        display: none;
+      }
+
+      .hero {
+        padding-bottom: 40px;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(180deg, rgba(21, 34, 24, 0.78) 0%, rgba(21, 34, 24, 0.88) 48%, rgba(21, 34, 24, 0.98) 100%),
+          url("assets/images/hero-real.jpg") center / cover no-repeat;
+      }
+
+      .hero-actions,
+      .footer-inner {
+        display: grid;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .quick-facts,
+      .grid-3,
+      .numbers {
+        grid-template-columns: 1fr;
+      }
+
+      .carousel-controls {
+        padding: 12px;
+      }
+
+      .carousel-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 26px;
+      }
+
+      section {
+        padding: 68px 0;
+      }
+
+      .tabs {
+        width: 100%;
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="#top" aria-label="Reflexia">
+          <img class="brand-mark" src="assets/images/reflexia-logo-mark.png" alt="" aria-hidden="true">
+          <span class="brand-name">
+            <strong>Reflexia</strong>
+            <span>Slavske, Carpathians</span>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Основна навігація">
+          <a href="#object">Об'єкт</a>
+          <a href="#formats">Сценарії</a>
+          <a href="#model">Фінмодель</a>
+          <a href="#contact">Заявка</a>
+        </nav>
+        <a class="btn btn-primary" href="#contact">Отримати інвест-пакет</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">Продаж туристичної нерухомості</span>
+            <h1 id="hero-title">Дзеркальні будинки у Славському біля Тростяна</h1>
+            <p class="hero-copy">3 автономні будинки з панорамним склінням 240 градусів, приватною локацією та видом на гірськолижну гору. Об'єкт продається на стадії високої готовності: як один будинок, частина комплексу або весь проєкт.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Обговорити купівлю</a>
+              <a class="btn btn-secondary" href="#object">Подивитися параметри</a>
+            </div>
+          </div>
+          <div class="quick-facts" aria-label="Ключові параметри">
+            <div class="fact"><strong>3</strong><span>каркасні дзеркальні будинки</span></div>
+            <div class="fact"><strong>87%</strong><span>орієнтовна готовність проєкту</span></div>
+            <div class="fact"><strong>500 м</strong><span>до крісельного підйомника Тростян</span></div>
+            <div class="fact"><strong>15 сот.</strong><span>земельна ділянка у Славському</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="object" class="section-muted" aria-labelledby="object-title">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-kicker">Об'єкт</span>
+              <h2 id="object-title">Це ще не готовий готель, але вже майже завершений інвестпроєкт</h2>
+            </div>
+            <p class="lead">Це важливо для позиціонування: покупець отримує не ідею з нуля, а фізично побудований комплекс із сильним візуальним продуктом, локацією і зрозумілим обсягом добудови.</p>
+          </div>
+
+          <div class="grid-3">
+            <article class="info-box">
+              <h3>Формат</h3>
+              <p>3 окремі будинки по 30 м² внутрішньої площі, тераси по 24 м², технічне приміщення 24 м², паркомісця та зони відпочинку.</p>
+            </article>
+            <article class="info-box">
+              <h3>Локація</h3>
+              <p>Славське, урочище Горби. До центру - близько 10 хв авто, до підйомника на Тростян - орієнтовно 500 метрів.</p>
+            </article>
+            <article class="info-box">
+              <h3>USP</h3>
+              <p>Дзеркальний фасад, панорамне безрамне скління, приватність, вид на гори і готова архітектурна концепція.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-olive" aria-label="Фото та відео Reflexia">
+        <div class="container media-grid">
+          <video class="media-main" src="assets/video/reflexia-view.mp4" controls playsinline poster="assets/images/video-poster.jpg"></video>
+          <div class="media-stack">
+            <img src="assets/images/render-complex.jpg" alt="Рендер трьох дзеркальних будинків Reflexia">
+            <img src="assets/images/interior-real-dsc-0083.jpg" alt="Реальний інтер'єр будинку Reflexia">
+          </div>
+        </div>
+      </section>
+
+      <section id="formats" aria-labelledby="formats-title">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-kicker">Сценарії купівлі</span>
+              <h2 id="formats-title">Один актив - кілька логік покупця</h2>
+            </div>
+            <p class="lead">Перший тест має не просто зібрати ліди, а показати, хто реагує краще: інвестор, який шукає cash-flow актив, чи покупець, якому потрібна приватна резиденція у Карпатах.</p>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="Режим сторінки">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" aria-controls="investor-panel" data-mode="investor">Інвестору</button>
+          </div>
+
+          <div id="investor-panel" class="mode-panel" data-panel="investor">
+            <div class="grid-3">
+              <article class="info-box dark-box">
+                <h3>Купити 1 будинок</h3>
+                <p>Орієнтир: $140K під ключ. Сценарій для входу в проєкт без купівлі всього комплексу.</p>
+              </article>
+              <article class="info-box dark-box">
+                <h3>Купити весь комплекс</h3>
+                <p>Орієнтир: $390K за 3 будинки під ключ. Основна логіка - готовий міні-готель у туристичній локації.</p>
+              </article>
+              <article class="info-box dark-box">
+                <h3>Партнерська модель</h3>
+                <p>Можливий гібрид: продаж частини проєкту або інвестиція в добудову з подальшим запуском.</p>
+              </article>
+            </div>
+            <div class="numbers">
+              <div class="number"><strong>$100-140</strong><span>орієнтир тарифу за добу</span></div>
+              <div class="number"><strong>73%</strong><span>середня завантаженість у прогнозі продавця</span></div>
+              <div class="number"><strong>$97.7K</strong><span>прогнозований дохід/рік за 3 будинки</span></div>
+              <div class="number"><strong>4 роки</strong><span>орієнтир окупності за базовим прогнозом</span></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section-olive" aria-labelledby="status-title">
+        <div class="container status-grid">
+          <div class="progress">
+            <span class="section-kicker">Стан готовності</span>
+            <div class="progress-value">
+              <strong>87%</strong>
+            </div>
+            <div class="bar" aria-hidden="true"><span></span></div>
+            <p class="lead" style="margin-top: 18px;">Орієнтовний статус за поточним брифом. Перед публікацією варто підтвердити точний перелік завершених і незавершених робіт.</p>
+          </div>
+          <div>
+            <h2 id="status-title">Що вже зроблено і що треба завершити</h2>
+            <ul class="checklist" style="margin-top: 24px;">
+              <li>Збудовані каркаси, дах, панорамне скління, комунікації та частина оздоблення.</li>
+              <li>Потрібно завершити тераси, огорожу, частину оздоблення, сантехніку, меблі та фінальне подвір'я.</li>
+              <li>Окрема розмова - юридичний пакет, структура угоди і варіант купівлі землі/будинків.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="model" class="section-muted" aria-labelledby="model-title">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="section-kicker">Фінансова модель</span>
+              <h2 id="model-title">Цифри для першого фільтра покупця</h2>
+            </div>
+            <p class="lead">На лендингу варто показати цифри як попередню модель, а не як гарантовану дохідність. Серйозному покупцю після заявки можна відправляти повний інвест-пакет.</p>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Сценарій</th>
+                  <th>Орієнтир ціни</th>
+                  <th>Для кого</th>
+                  <th>Коментар</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1 будинок під ключ</td>
+                  <td>$140,000</td>
+                  <td>Перший інвестор / сімейна резиденція</td>
+                  <td>Нижчий чек входу, простіше протестувати попит.</td>
+                </tr>
+                <tr>
+                  <td>2 будинки під ключ</td>
+                  <td>$270,000</td>
+                  <td>Інвестор у малий туристичний актив</td>
+                  <td>Можна залишити один будинок під себе, другий - під оренду.</td>
+                </tr>
+                <tr>
+                  <td>Весь комплекс</td>
+                  <td>$390,000</td>
+                  <td>Готельєр / девелопер / приватний інвестор</td>
+                  <td>Найсильніший сценарій для запуску цілісного бренду.</td>
+                </tr>
+                <tr>
+                  <td>Добудова всіх 3</td>
+                  <td>~$148,500</td>
+                  <td>Покупець, який хоче контроль фінішних рішень</td>
+                  <td>Оцінка з кошторису, потребує актуалізації перед угодою.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section aria-label="Карусель інтер'єрів">
+        <div class="container">
+          <div class="carousel" data-carousel>
+            <img class="carousel-image" src="assets/images/carousel-interior-1.jpg" alt="Запроєктований інтер'єр Reflexia з панорамним склінням" data-carousel-image>
+            <div class="carousel-controls" aria-label="Керування каруселлю">
+              <button class="carousel-btn" type="button" aria-label="Попереднє фото" data-carousel-prev>&lsaquo;</button>
+              <button class="carousel-btn" type="button" aria-label="Наступне фото" data-carousel-next>&rsaquo;</button>
+            </div>
+            <div class="carousel-status" data-carousel-status>1 / 4</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-olive" aria-labelledby="contact-title">
+        <div class="container contact">
+          <div>
+            <span class="section-kicker">Заявка</span>
+            <h2 id="contact-title">Отримати інвест-пакет Reflexia</h2>
+            <p class="lead" style="margin-top: 18px;">Залиште контакт і сценарій інтересу. У відповідь можна надіслати презентацію, фінансову модель, локацію, фото/відео та перелік документів для перевірки.</p>
+            <div class="numbers">
+              <div class="number"><strong>1</strong><span>первинний дзвінок</span></div>
+              <div class="number"><strong>2</strong><span>інвест-пакет і документи</span></div>
+              <div class="number"><strong>3</strong><span>перегляд / переговори</span></div>
+              <div class="number"><strong>4</strong><span>структура угоди</span></div>
+            </div>
+          </div>
+
+          <form action="https://formspree.io/f/REPLACE_ME" method="POST">
+            <div class="field">
+              <label for="name">Ім'я</label>
+              <input id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="phone">Телефон або Telegram</label>
+              <input id="phone" name="phone" autocomplete="tel" required>
+            </div>
+            <div class="field">
+              <label for="intent">Що розглядаєте?</label>
+              <select id="intent" name="intent" required>
+                <option value="">Оберіть сценарій</option>
+                <option>Купити весь комплекс</option>
+                <option>Купити 1 будинок</option>
+                <option>Партнерство / інвестиція в добудову</option>
+                <option>Хочу більше інформації</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="budget">Орієнтовний бюджет</label>
+              <select id="budget" name="budget" required>
+                <option value="">Оберіть діапазон</option>
+                <option>До $100K</option>
+                <option>$100K-$150K</option>
+                <option>$150K-$300K</option>
+                <option>$300K+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Коментар</label>
+              <textarea id="message" name="message" placeholder="Наприклад: хочу отримати фінмодель / цікавить один будинок / готовий говорити цього тижня"></textarea>
+            </div>
+            <input type="hidden" name="source" value="reflexia_landing">
+            <button class="btn btn-primary" type="submit">Надіслати заявку</button>
+            <p class="form-note">Форма поки має placeholder Formspree. Перед публікацією потрібно замінити `REPLACE_ME` на реальний endpoint.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>Reflexia, Славське, Львівська область</span>
+        <span>Draft landing page for investor validation</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll("[data-mode]");
+    const panels = document.querySelectorAll("[data-panel]");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const mode = tab.dataset.mode;
+
+        tabs.forEach((item) => {
+          const active = item.dataset.mode === mode;
+          item.classList.toggle("is-active", active);
+          item.setAttribute("aria-selected", String(active));
+        });
+
+        panels.forEach((panel) => {
+          panel.hidden = panel.dataset.panel !== mode;
+        });
+      });
+    });
+
+    const carousel = document.querySelector("[data-carousel]");
+
+    if (carousel) {
+      const carouselItems = [
+        {
+          src: "assets/images/carousel-interior-1.jpg",
+          alt: "Запроєктований інтер'єр Reflexia з панорамним склінням"
+        },
+        {
+          src: "assets/images/carousel-interior-2.jpg",
+          alt: "Запроєктована зона відпочинку Reflexia з панорамним видом"
+        },
+        {
+          src: "assets/images/carousel-interior-3.jpg",
+          alt: "Запроєктований інтер'єр Reflexia з видом через скління"
+        },
+        {
+          src: "assets/images/carousel-interior-4.jpg",
+          alt: "Запроєктований інтер'єр Reflexia у світлій палітрі"
+        }
+      ];
+
+      let carouselIndex = 0;
+      const carouselImage = carousel.querySelector("[data-carousel-image]");
+      const carouselStatus = carousel.querySelector("[data-carousel-status]");
+      const prevButton = carousel.querySelector("[data-carousel-prev]");
+      const nextButton = carousel.querySelector("[data-carousel-next]");
+
+      const setCarouselImage = (nextIndex) => {
+        carouselIndex = (nextIndex + carouselItems.length) % carouselItems.length;
+        const item = carouselItems[carouselIndex];
+        carouselImage.src = item.src;
+        carouselImage.alt = item.alt;
+        carouselStatus.textContent = `${carouselIndex + 1} / ${carouselItems.length}`;
+      };
+
+      prevButton.addEventListener("click", () => setCarouselImage(carouselIndex - 1));
+      nextButton.addEventListener("click", () => setCarouselImage(carouselIndex + 1));
+    }
+  </script>
+</body>
+</html>
