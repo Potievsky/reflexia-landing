@@ -647,6 +647,13 @@
       font-size: 12px;
     }
 
+    .form-status {
+      min-height: 20px;
+      margin-top: 12px;
+      color: var(--vanilla);
+      font-size: 13px;
+    }
+
     .footer {
       padding: 28px 0;
       color: rgba(250, 241, 229, 0.58);
@@ -974,18 +981,23 @@
             </div>
           </div>
 
-          <form action="https://formspree.io/f/REPLACE_ME" method="POST">
+          <form
+            action="https://docs.google.com/forms/d/e/1FAIpQLSf0UEtLbJgZaMhN943Btm6L_EKvzYgVRv-XYwoWDLBy0YgyCg/formResponse"
+            method="POST"
+            target="google-forms-submit-frame"
+            data-contact-form
+          >
             <div class="field">
               <label for="name">Ім'я</label>
-              <input id="name" name="name" autocomplete="name" required>
+              <input id="name" name="entry.725632668" autocomplete="name" required>
             </div>
             <div class="field">
               <label for="phone">Телефон або Telegram</label>
-              <input id="phone" name="phone" autocomplete="tel" required>
+              <input id="phone" name="entry.200597405" autocomplete="tel" required>
             </div>
             <div class="field">
               <label for="intent">Що розглядаєте?</label>
-              <select id="intent" name="intent" required>
+              <select id="intent" name="entry.11156554" required>
                 <option value="">Оберіть сценарій</option>
                 <option>Купити весь комплекс</option>
                 <option>Купити 1 будинок</option>
@@ -995,7 +1007,7 @@
             </div>
             <div class="field">
               <label for="budget">Орієнтовний бюджет</label>
-              <select id="budget" name="budget" required>
+              <select id="budget" name="entry.1801252335" required>
                 <option value="">Оберіть діапазон</option>
                 <option>До $100K</option>
                 <option>$100K-$150K</option>
@@ -1005,11 +1017,13 @@
             </div>
             <div class="field">
               <label for="message">Коментар</label>
-              <textarea id="message" name="message" placeholder="Наприклад: хочу отримати фінмодель / цікавить один будинок / готовий говорити цього тижня"></textarea>
+              <textarea id="message" name="entry.76756678" placeholder="Наприклад: хочу отримати фінмодель / цікавить один будинок / готовий говорити цього тижня"></textarea>
             </div>
-            <input type="hidden" name="source" value="reflexia_landing">
+            <input type="hidden" name="entry.1458825850" value="reflexia_landing">
             <button class="btn btn-primary" type="submit">Надіслати заявку</button>
-            <p class="form-note">Форма поки має placeholder Formspree. Перед публікацією потрібно замінити `REPLACE_ME` на реальний endpoint.</p>
+            <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+            <p class="form-note">Після відправки заявка потрапить у Google Sheets. Ми зв'яжемося з вами напряму.</p>
+            <iframe name="google-forms-submit-frame" title="Google Forms submit frame" hidden></iframe>
           </form>
         </div>
       </section>
@@ -1081,6 +1095,26 @@
 
       prevButton.addEventListener("click", () => setCarouselImage(carouselIndex - 1));
       nextButton.addEventListener("click", () => setCarouselImage(carouselIndex + 1));
+    }
+
+    const contactForm = document.querySelector("[data-contact-form]");
+
+    if (contactForm) {
+      const submitButton = contactForm.querySelector("button[type='submit']");
+      const formStatus = contactForm.querySelector("[data-form-status]");
+
+      contactForm.addEventListener("submit", () => {
+        submitButton.disabled = true;
+        submitButton.textContent = "Надсилаємо...";
+        formStatus.textContent = "";
+
+        window.setTimeout(() => {
+          contactForm.reset();
+          submitButton.disabled = false;
+          submitButton.textContent = "Надіслати заявку";
+          formStatus.textContent = "Дякуємо. Заявку отримано, ми зв'яжемося з вами напряму.";
+        }, 900);
+      });
     }
   </script>
 </body>
