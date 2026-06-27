@@ -350,12 +350,12 @@
     .media-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      grid-template-rows: clamp(420px, 46vw, 560px);
       gap: 18px;
       align-items: stretch;
     }
 
     .media-grid img,
-    .media-grid video,
     .carousel-image {
       width: 100%;
       height: 100%;
@@ -365,17 +365,60 @@
       background: rgba(255, 255, 255, 0.06);
     }
 
-    .media-main {
-      min-height: 540px;
+    .video-card {
+      position: relative;
+      min-height: 0;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid rgba(250, 241, 229, 0.12);
+      background: rgba(21, 34, 24, 0.56);
+    }
+
+    .video-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 0;
+      border-radius: 0;
+    }
+
+    .video-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(21, 34, 24, 0.08), rgba(21, 34, 24, 0.46));
+      pointer-events: none;
+    }
+
+    .video-link {
+      position: absolute;
+      z-index: 2;
+      left: 22px;
+      bottom: 22px;
+      width: auto;
+    }
+
+    .play-mark {
+      width: 38px;
+      height: 38px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--forest);
+      color: var(--vanilla);
+      font-size: 18px;
+      line-height: 1;
     }
 
     .media-stack {
       display: grid;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
       gap: 18px;
+      min-height: 0;
     }
 
     .media-stack > * {
-      min-height: 260px;
+      min-height: 0;
     }
 
     .tabs {
@@ -685,11 +728,17 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .media-main,
+      .media-grid {
+        grid-template-rows: auto;
+      }
+
+      .video-card,
       .media-stack > *,
       .carousel,
       .carousel-image {
         min-height: 300px;
+        aspect-ratio: 16 / 9;
+        height: auto;
       }
     }
 
@@ -752,6 +801,13 @@
       .tabs {
         width: 100%;
         grid-template-columns: 1fr;
+      }
+
+      .video-link {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        width: calc(100% - 28px);
       }
     }
   </style>
@@ -827,7 +883,13 @@
 
       <section class="section-olive" aria-label="Фото та відео Reflexia">
         <div class="container media-grid">
-          <video class="media-main" src="https://github.com/Potievsky/reflexia-landing/releases/download/assets-v1/reflexia-view.mp4" controls playsinline poster="assets/images/video-poster.jpg"></video>
+          <div class="video-card">
+            <img src="assets/images/video-poster.jpg" alt="Відеоогляд локації Reflexia у Славському">
+            <a class="btn btn-primary video-link" href="https://github.com/Potievsky/reflexia-landing/releases/download/assets-v1/reflexia-view.mp4" target="_blank" rel="noopener">
+              <span class="play-mark" aria-hidden="true">▶</span>
+              Відкрити відео
+            </a>
+          </div>
           <div class="media-stack">
             <img src="assets/images/render-complex.jpg" alt="Рендер трьох дзеркальних будинків Reflexia">
             <img src="assets/images/interior-real-dsc-0083.jpg" alt="Реальний інтер'єр будинку Reflexia">
